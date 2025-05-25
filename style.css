@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.tab-bar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  padding: 10px 10px;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  z-index: 999;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.tab-bar button {
+  background: #474747;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 50px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: 6px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content button {
+  background: #13c4e0;
+}
+
+#fabBtn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: #474747;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 998;
+}
+
+.tab-content {
+  display: none;
+}
+
+iframe {
+  width: 100%;
+  height: calc(100vh - 60px);
+  border: none;
+}
+
+#welcome {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+#welcome img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}

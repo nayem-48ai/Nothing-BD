@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nothing BD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FAB -->
+<button id="fabBtn" onclick="toggleTabBar()">☰</button>
+
+<!-- Horizontal Tab Bar -->
+<div id="tabBar" class="tab-bar">
+  <button onclick="refreshTab()">Reload</button>
+  <button onclick="showTab('a')">2FA</button>
+  <div style="position: relative;">
+    <button onclick="toggleDropdown()">T-Mail▼</button>
+    <div id="dropdownB" class="dropdown-content">
+      <button onclick="loadBPage('https://tempmail.plus/en/#!')">TMail+</button>
+      <button onclick="loadBPage('https://mail.cx')">mailCX</button>
+      <button onclick="loadBPage('https://emailfake.com/')">eFake</button>
+    </div>
+  </div>
+  <button onclick="showTab('c')">Inbox</button>
+  <button onclick="toggleTabBar()">✖</button>
+</div>
+
+<!-- Welcome -->
+<div id="welcome">
+  <h1>স্বাগতম!</h1>
+  <h2>I'm MD Tarikul Islam</h2>
+  <p>আপনার কাজ অনুযায়ী ব্যবহার করবেন ।</p>
+  <img src="https://i.ibb.co/X856DFp/5b484b689761.png" alt="Your Photo">
+</div>
+
+<!-- Tabs -->
+<div id="tab-a" class="tab-content">
+  <iframe id="iframe-a" src="https://2fa.zone/"></iframe>
+</div>
+
+<div id="tab-b" class="tab-content">
+  <iframe id="b-frame" src="https://tempmail.plus/en/#!"></iframe>
+</div>
+
+<div id="tab-c" class="tab-content">
+  <iframe id="iframe-c" src="https://www.inbox.lv/?reason=timeout"></iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
