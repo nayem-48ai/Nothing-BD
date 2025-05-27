@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Baloo Da 2', 'Quicksand', sans-serif;
 }
 
 .tab-bar {
@@ -11,9 +11,10 @@ body {
   background: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   border-radius: 10px;
-  padding: 10px 10px;
+  padding: 10px;
   display: none;
   align-items: center;
+  justify-content: space-evenly;
   gap: 8px;
   z-index: 999;
   animation: slideDown 0.3s ease;
@@ -76,7 +77,7 @@ body {
 
 iframe {
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 25px);
   border: none;
 }
 
@@ -93,5 +94,76 @@ iframe {
 #welcome img {
   width: 150px;
   border-radius: 50%;
-  margin-top: 20px;
+  margin-top: 10px;
+  animation: floatPulse 3s ease-in-out infinite;
+}
+
+@keyframes floatPulse {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(19, 196, 224, 0.5);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(19, 196, 224, 0.3);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(19, 196, 224, 0.5);
+  }
+}
+
+
+.inbox-tab {
+  padding: 10px 70px 10px 10px ;
+  display: flex;
+  gap: 10px;
+  background: #eeeeee;
+  align-items: center;
+}
+
+.inbox-tab input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.inbox-tab button {
+  background: #13c4e0;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tab-c-default {
+  padding: 30px;
+  text-align: center;
+  font-size: 16px;
+  background: #f9f9f9;
+}
+
+.tab-c-default img {
+  width: 120px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.tab-c-default img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(19, 196, 224, 0.7);
+}
+.tab-c-default h2 {
+  margin: 10px 0 5px;
+}
+
+.tab-c-default p {
+  color: #444;
+}
+
+.tab-c-default strong {
+  color: #0088cc;
 }

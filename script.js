@@ -31,6 +31,20 @@ function showTab(tab) {
 }
 
 function loadBPage(url) {
-  showTab('b');
-  document.getElementById('b-frame').src = url;
+  if (url.includes('mail.cx')) {
+    window.open(url, '_blank');
+  } else {
+    showTab('b');
+    document.getElementById('b-frame').src = url;
+  }
+}
+
+function loadInboxURL() {
+  const url = document.getElementById('inbox-url').value.trim();
+  if (url) {
+    const fullUrl = url.startsWith('http') ? url : 'https://' + url;
+    document.getElementById('iframe-c').src = fullUrl;
+    document.getElementById('iframe-c').style.display = 'block';
+    document.getElementById('default-msg').style.display = 'none';
+  }
 }

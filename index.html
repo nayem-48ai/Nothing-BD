@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nothing BD</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,16 +24,16 @@
       <button onclick="loadBPage('https://emailfake.com/')">eFake</button>
     </div>
   </div>
-  <button onclick="showTab('c')">Inbox</button>
+  <button onclick="showTab('c')">Form</button>
   <button onclick="toggleTabBar()">✖</button>
 </div>
 
 <!-- Welcome -->
 <div id="welcome">
+   <img src="https://i.ibb.co/X856DFp/5b484b689761.png" alt="Your Photo">
   <h1>স্বাগতম!</h1>
   <h2>I'm MD Tarikul Islam</h2>
   <p>আপনার কাজ অনুযায়ী ব্যবহার করবেন ।</p>
-  <img src="https://i.ibb.co/X856DFp/5b484b689761.png" alt="Your Photo">
 </div>
 
 <!-- Tabs -->
@@ -45,7 +46,17 @@
 </div>
 
 <div id="tab-c" class="tab-content">
-  <iframe id="iframe-c" src="https://mail.google.com/mail/"></iframe>
+  <div class="inbox-tab">
+    <input id="inbox-url" type="text" placeholder="Enter your Google forms URL..." onkeydown="if(event.key==='Enter') loadInboxURL()">
+    <button onclick="loadInboxURL()">Go</button>
+  </div>
+  <div id="default-msg" class="tab-c-default">
+    <h2>স্বাগতম Nothing BD Tool এ</h2>
+    <img src="https://i.ibb.co/X856DFp/5b484b689761.png" alt="User">
+    <p>এই টুলটি ব্যবহার করে আপনি বিভিন্ন ফর্ম ওপেন করতে পারবেন, <br> যেকোনো কাজ সাবমিটের পূর্বে যাচাই করতে পারবেন।</p>
+    <p><strong>Contact: @Tnayem48</strong></p>
+  </div>
+  <iframe id="iframe-c" src="" style="display: none;"></iframe>
 </div>
 
 <script src="script.js"></script>
